@@ -52,11 +52,11 @@ const LateralBar = () => {
             ${showFilterPokemon?'w-full sm:w-[300px]':'w-0'}`}>
                 <div className="min-w-[276px] grid gap-5 "> 
                     <div className="w-full flex justify-end">
-                        <span onClick={() => setShowFilterPokemon()} className='p-1 w-7 h-7 text-center cursor-pointer hover:bg-slate-400 rounded-full transition-all duration-300'>X</span>
+                        <span onClick={() => setShowFilterPokemon()} className='p-1 w-7 h-7 text-center font-sembold cursor-pointer hover:bg-slate-400 rounded-full transition-all duration-300'>X</span>
                     </div>
                     {/* <h4 className='w-full text-end block'>Filter</h4> */}
                     <div className='text-center flex flex-col gap-3'>
-                        <h5>Types</h5>
+                        <h5 className='font-semibold capitalize text-sm sm:text-base'>Types</h5>
                         <ul className="flex flex-wrap gap-2 ">
                             {
                                 types.map((type) => {
@@ -71,8 +71,8 @@ const LateralBar = () => {
                         <button onClick={() => handleSelectOrder('DESC')} className={` py-1 px-5 rounded-lg ${filters?.order==='DESC'?'bg-blue-400':'bg-slate-400'}`}>Z-A</button>
                     </div>
                     <div className="flex flex-wrap justify-around">
-                        <button onClick={() => handleFilter()}>Filtrar</button>
-                        <button onClick={() => handleClearFilter()}>Sin Filtros</button>
+                        <button className='font-semibold capitalize text-sm sm:text-base' onClick={() => handleFilter()}>Filter</button>
+                        <button className='font-semibold capitalize text-sm sm:text-base' onClick={() => handleClearFilter()}>Unfiltered</button>
                     </div>
                 </div>
             </div>
